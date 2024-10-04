@@ -1,5 +1,5 @@
 
-import './App.css'
+import './App.module.css'
 import Profile from './profile/Profile'
 import userData from './profile/userData.json';
 import FriendList from './friends/FriendList.jsx'

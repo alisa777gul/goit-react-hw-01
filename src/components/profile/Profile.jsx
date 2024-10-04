@@ -1,4 +1,4 @@
-import "./Profile.css";
+import "./Profile.module.css";
 
 const Profile = (props) => {
   return ( 
