@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const FriendListItem = ({ friend }) => { // Accept the friend prop
+const FriendListItem = ({ friend }) => { 
   const statusClass = friend.isOnline ? 'isOnline' : 'isOffline';
  
     return (
