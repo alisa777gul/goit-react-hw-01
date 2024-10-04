@@ -1,7 +1,6 @@
-import "./TransactionHistory.module.css";
+import styles from "./TransactionHistory.module.css";
 
 const TransactionHistory = ({ items }) => {
-
   const transactionTypes = {
     invoice: "Invoice",
     withdrawal: "Withdrawal",
@@ -10,26 +9,24 @@ const TransactionHistory = ({ items }) => {
   };
 
   return (
-    
-      <table >
-        <thead className="table-head">
-          <tr className="headers">
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+    <table className={styles.table}>
+      <thead className={styles.tableHead}>
+        <tr className={styles.tr}>
+          <th className={styles.th}>Type</th>
+          <th className={styles.th}>Amount</th>
+          <th className={styles.th}>Currency</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr className={styles.tr} key={item.id}>
+            <td className={styles.td}>{transactionTypes[item.type] || "Unknown"}</td>
+            <td className={styles.td}>{item.amount}</td>
+            <td className={styles.td}>{item.currency}</td>
           </tr>
-        </thead>
-        <tbody>
-          {items.map((item) => (
-            <tr className="id" key={item.id}>
-              <td className="type">{transactionTypes[item.type] || "Unknown"}</td>
-              <td className="amount">{item.amount}</td>
-              <td className="currency">{item.currency}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    
+        ))}
+      </tbody>
+    </table>
   );
 };
 
