@@ -15,8 +15,9 @@
  .friend-element{   
     border: 2px solid black;
     padding: 8px 16px 8px 16px;
-    width: 80px;
+    width: 90px;
   display: flex;
+  height: 120px;
   flex-direction: column;
   justify-items: center;
   align-items: center;
