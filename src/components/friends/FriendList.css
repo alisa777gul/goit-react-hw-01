@@ -1,6 +1,7 @@
 .friends-box{
   
-
+margin-bottom: 50px;
+width: 100%;
 }
 
 .friends-list{
@@ -9,7 +10,8 @@
     gap: 16px;
     justify-items: center;
     align-items: center;
- 
+ margin: 0 auto;
+
 }
 
  .friend-element{   
